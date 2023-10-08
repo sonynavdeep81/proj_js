@@ -11,3 +11,5 @@ console.log(c);
 console.log(d);
 console.log(e);
 console.log(f);
+console.log(typeof a);
+console.log(typeof f);
