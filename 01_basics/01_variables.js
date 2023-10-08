@@ -7,11 +7,10 @@ return "undefined" whereas "let" and "const" variables remain in temporal dead z
 error if accessed in this zone) until they are initialized. Temporal dead zone is the time between when a variable
 is decleared and when it is initialized.
 3. "var" and "let" can be overwritten but const cannot as they cannot be changed.
-4. "let" variables cannot be redeclared like "var"
-5. Both "let" and "const" are block-scoped variables i.e. they can be accessed only within the block whereas "var"
+4. Both "let" and "const" are block-scoped variables i.e. they can be accessed only within the block whereas "var"
 can be accessed anywhere.
-6. Block-scoped variables "let" and "const" cannot be redeclared.
-7. "var" should never be used.
+5. Block-scoped variables "let" and "const" cannot be redeclared.
+6. "var" should never be used.
 */
 
 /* Hoisting */
