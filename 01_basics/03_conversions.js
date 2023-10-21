@@ -1,5 +1,6 @@
 /* Datatypes */
 /* Javascript is a dynamically typed language*/
+/*Type Conversion*/
 let a = "33";
 let b = "33a";
 let c = null;
@@ -44,3 +45,21 @@ console.log(typeof Boolean(j));
 let k = 33;
 console.log(String(k));
 console.log(typeof String(k));
+
+/*Type Coercion*/
+/*This is automatically performed by javascript */
+
+let a1 = "1" + "2" + 3;
+console.log(a1); //123 number to string conversion
+
+let a2 = "5" - "2" - "1";
+console.log(a2); //2 string to number conversion
+
+let a3 = "5" - "2" - "1" + "6" + "7";
+console.log(a3); //267
+
+let a4 = "5" * 3;
+console.log(a4); //15 string to number conversion
+
+let a5 = "6" / 3;
+console.log(a5); //2 string to number conversion
