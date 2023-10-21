@@ -1,3 +1,5 @@
+/* Datatypes */
+/* Javascript is a dynamically typed language*/
 let a = "33";
 let b = "33a";
 let c = null;
