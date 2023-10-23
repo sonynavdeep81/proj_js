@@ -6,7 +6,7 @@ const c = b(10);
 console.log(c);
 
 //multiple paramters
-const d = (a, b) => a * b;
+const d = (a, b) => a * b; //arrow functions dont have this pointer
 const e = d(5, 7);
 console.log(`Value=${e}`);
 
