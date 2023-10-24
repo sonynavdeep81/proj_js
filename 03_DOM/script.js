@@ -5,6 +5,7 @@ let score = 20;
 let hscore = 0;
 let score_val;
 console.log(secretNumber);
+
 /*Check button */
 document.querySelector('.check').addEventListener('click', function () {
   if (score) {
@@ -22,14 +23,6 @@ document.querySelector('.check').addEventListener('click', function () {
     } else if (val !== secretNumber) {
       document.querySelector('.message').textContent =
         val < secretNumber ? 'Too Low!' : 'Too High!';
-    } else if (val < secretNumber) {
-      document.querySelector('.message').textContent = 'Too Low!';
-      score--;
-      if (score === 0) {
-        document.querySelector('.message').textContent = 'You lost the game!!';
-      }
-    } else if (val > secretNumber) {
-      document.querySelector('.message').textContent = 'Too High!';
       score--;
       if (score === 0) {
         document.querySelector('.message').textContent = 'You lost the game!!';
