@@ -5,19 +5,33 @@ let score = 20;
 let hscore = 0;
 let score_val;
 console.log(secretNumber);
+/*Following functions have been used to remove duplicacy (DRY)--> dont repeat yourself rule followed */
 const display = function (message) {
+  //anonymous function or function expression used here
   document.querySelector('.message').textContent = message;
 };
-
+const displaySecretNumber = function (secret) {
+  document.querySelector('.number').textContent = secret;
+};
+const changeBackground = function (clr) {
+  document.querySelector('body').style.backgroundColor = clr;
+};
+const changeWidth = (w) => {
+  //used arrow function here
+  document.querySelector('.number').style.width = w;
+};
+const displayScore = (S) => {
+  document.querySelector('.score').textContent = S;
+};
 /*Check button */
 document.querySelector('.check').addEventListener('click', function () {
   if (score) {
     const val = Number(document.querySelector('.guess').value);
     if (val === secretNumber) {
       display('✌️Correct answer!');
-      document.querySelector('.number').textContent = secretNumber;
-      document.querySelector('.number').style.width = '30rem';
-      document.querySelector('body').style.backgroundColor = '#60b347';
+      displaySecretNumber(secretNumber);
+      changeWidth('30rem');
+      changeBackground('#60b347');
       score_val = Number(document.querySelector('.score').textContent);
       if (score_val > hscore) {
         hscore = score_val;
@@ -30,15 +44,15 @@ document.querySelector('.check').addEventListener('click', function () {
         display('You lost the game!!');
       }
     }
-    document.querySelector('.score').textContent = score;
+    displayScore(score);
   }
 });
 /*Again button */
 document.querySelector('.again').addEventListener('click', function () {
-  document.querySelector('.number').style.width = '15rem';
-  document.querySelector('body').style.backgroundColor = '#222';
+  changeWidth('15rem');
+  changeBackground('#222');
   score = 20;
-  document.querySelector('.number').textContent = '?';
+  displaySecretNumber('?');
   display('Start guessing...');
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.score').textContent = 20;
