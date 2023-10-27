@@ -26,4 +26,5 @@ console.log(biodata['funVal1']());
 console.log(biodata['funVal2'](6));
 biodata['funVal3']();
 biodata['funVal4']();
+biodata.funVal3(); //another way
 console.log(biodata['new_variable']);
