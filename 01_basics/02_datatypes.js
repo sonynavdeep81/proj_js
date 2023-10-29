@@ -1,3 +1,5 @@
+/*Javascript is a dynamically typed language */
+
 let a = 10; //number
 let b = "hello"; //string
 let c = true; //boolean

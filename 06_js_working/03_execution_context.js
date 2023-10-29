@@ -14,8 +14,9 @@ function second() {
   var c = 2;
   return c;
 }
+first();
 
-/*In the above code GEC will be 
+/*In the above code GEC will contain 
 *********************************
 name='Jonas'
 first=<function>
